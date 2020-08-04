@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from '../http.service';
 
 @Component({
   selector: 'app-list',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+  brews: any[];
+  count: number;
+
+  constructor(private _http: HttpService) { }
 
   ngOnInit() {
+    this._http.getBeer().subscribe((data: any[]) => {
+      this.brews = data;
+      console.log(this.brews[0]);
+    });
   }
 
 }

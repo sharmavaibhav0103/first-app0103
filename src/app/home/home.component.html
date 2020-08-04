@@ -21,9 +21,13 @@
 </div>
 </div>
 
+<p [ngClass]="setClasses()">
+  Adding Classes
+</p>
+
 <div class="container">
   <input type="text" [(ngModel)] = "name" /> 
   <br/>
-  <p class="nextOne">You just typed "{{ name }}".</p>
+  <p class="nextOne">You just typed in "{{ name }}".</p>
 </div>
 

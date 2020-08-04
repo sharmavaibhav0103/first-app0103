@@ -18,4 +18,11 @@ export class HomeComponent implements OnInit {
   countClick(){
     this.clickCounter += 1;
   }
+  setClasses(){
+    let myClasses = {
+      bgyellow: this.clickCounter < 1,
+      bggreen: this.clickCounter >= 4
+    };
+     return myClasses;
+  }
 }
