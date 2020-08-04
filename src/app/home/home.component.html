@@ -4,7 +4,10 @@
 
 <p> You've clicked <button (click)="countClick()">this</button> {{ clickCounter }} times.</p>
 
-<div class="play-container" [style.background-color]="clickCounter < 3 || clickCounter > 10 ? 'white' : 'brown' ">
+<div class="play-container" [ngStyle]="{
+  'background-color': clickCounter > 4 ? 'brown' : 'white',
+  'border': clickCounter > 4 ? '1px solid black' : '1px solid lightgray'
+}">
   <ng-template [ngIf]="clickCounter > 3" [ngIfElse]="none">
     <p>The click counter<strong> Is Greater </strong>than 3.</p>
   </ng-template>
