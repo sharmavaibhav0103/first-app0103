@@ -1,0 +1,35 @@
+
+button{
+  background-color: brown;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 3px 7px;
+  letter-spacing: 1px;
+  font-size: 17px;
+  margin: 0 5px; 
+  outline: none;
+}
+p, .container{
+  font-family: consolas;
+  font-size: 17px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  padding: 50px;
+}
+button:active{
+  transform: scale(0.9);
+}
+.nextOne{
+  padding: 25px;
+}
+input{
+  border: 1px solid grey;
+  border-radius: 2px;
+  padding: 7px 10px;
+  outline: none;
+  font-weight: bold;
+}
+/* button:hover{
+  transform: scale(1.1);
+} */
